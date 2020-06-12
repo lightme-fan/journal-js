@@ -31,13 +31,14 @@ journalEntry();
 const entries = Number(prompt("Choose 1 to see the list of journal entries. \n Choose 2 to add a new journal entry \n Choose 3 to quit"))
 if (entries === 1) {
     alert(journalEntry());
-} // } else if (entries === 2) {
-//     const newJournalEntry = prompt("Add a new journal entry");
-//     for (let {title, content} of anotherEntry) {
-//         for (let newTitle of title) {
-//             newJournalEntry.push({newTitle, content});
-//         }
-//     }
-// } else if (entries === 3) {
+} else if (entries === 2) {
+     const newJournalEntry = prompt("Add a new journal entry");
+     const entry = [];
+     for (let {title, content} of anotherEntry) {
+         for (let newTitle of title) {
+             newJournalEntry = entry.push({newTitle, content});
+         }
+     }
+} else if (entries === 3) {
 
 // }
