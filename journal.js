@@ -1,3 +1,5 @@
+console.log('it works');
+
 const journalEntries = [
     {
         title: "My favourite sport",
@@ -18,32 +20,29 @@ const journalEntries = [
 
 let entry = 1;
 
-    const entries = prompt("Choose 1 to see the list of journal entries. \n Choose 2 to add a new journal entry \n Choose 3 to quit \n Choose 4 to remove the new journal entry");
-    if (entries == 1) {
-      for (let i = 0; i < journalEntries.length; i++) {
-            alert(`Title: ${journalEntries[i].title} \n Content: ${journalEntries[i].content}`);
-            alert(`Title: ${journalEntries[1].title} \n Content: ${journalEntries[1].content}`);
-            alert(`Title: ${journalEntries[2].title} \n Content: ${journalEntries[2].content}`);
-            i++;
-      }
+const entries = prompt("Choose 1 to see the list of journal entries. \n Choose 2 to add a new journal entry \n Choose 3 to quit \n Choose 4 to remove the new journal entry");
+if (entries == 1) {
+    alert(`Title: ${journalEntries[0].title} \n Content: ${journalEntries[0].content}`);
+    alert(`Title: ${journalEntries[1].title} \n Content: ${journalEntries[1].content}`);
+    alert(`Title: ${journalEntries[2].title} \n Content: ${journalEntries[2].content}`);
+}
+else if (entries == 2) {
+    let newTitle = prompt('Enter your new title');
+    let newContent = prompt('Enter your new content');
+    let newEntry = { title: newTitle, content: newContent }
+    newEntry.newTitle = newTitle;
+    newEntry.newContent = newContent;
+    journalEntries.push(newEntry);
+
+    // alert(`Title: ${journalEntries[3].title} \n Content: ${journalEntries[3].content}`);
+
+    for (let i = 0; i < journalEntries.length; i++) {
+        alert(`Title: ${journalEntries[i].title} \n Content: ${journalEntries[i].content}`);
     }
-    else if (entries == 2) {
-        let newTitle = prompt('Enter your new title');
-        let newContent = prompt('Enter your new content');
-        let newEntry = {title: newTitle, content: newContent}
-        newEntry.newTitle = newTitle;
-        newEntry.newContent = newContent;
-        journalEntries.push(newEntry);
-        
-        for (let i = 0; i < journalEntries.length; i++) {
-             alert(`Title: ${journalEntries[i].title} \n Content: ${journalEntries[i].content}`);
-             i++;
-        }
-        
-    }
-    else {
-      while (entries !== 3) {
+}
+else {
+    while (entries !== 3) {
         break;
-      }
     }
-    
+} 
+
