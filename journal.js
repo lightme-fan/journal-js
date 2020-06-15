@@ -34,25 +34,15 @@ while (entry < 4) {
         newEntry.newTitle = newTitle;
         newEntry.newContent = newContent;
         journalEntries.push(newEntry);
-        for (let i = 0; i < journalEntries.length; i++) {
-            alert(`Title: ${journalEntries[i].title} \n Content: ${journalEntries[i].content}`);
-        }
+
+        alert(`Title: ${journalEntries[3].title} \n Content: ${journalEntries[3].content}`);
+        
+        // for (let i = 0; i < journalEntries.length; i++) {
+        //     alert(`Title: ${journalEntries[i].title} \n Content: ${journalEntries[i].content}`);
+        // }
     }
     else if (entries !== 3) {
         break;
     }
     entry++;
 }
-
-/*My code: else if (onjaJournalChoices == 2) {
-    // Asking the user to add for the entries properties which are the title and the content when adding an entry.
-    let entryTitle = prompt("Enter your journal title:");
-    let entryContent= prompt("Enter your journal content:");
-    const newEntry = {title: entryTitle, content: entryContent};
-    newEntry.title = entryTitle;
-    newEntry.content = entryContent;
-    journal.push(newEntry);
-    for (let i = 0 ;i <= journal.length; i++) {
-    alert('Title:' +' '+ journal[i].title + '\n'+ 'Content:' + ' ' + journal[i].content);
-}
-}  */
